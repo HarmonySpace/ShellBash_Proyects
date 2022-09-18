@@ -11,8 +11,10 @@ i=0
 declare -a log
 
 echo "$log" | while IFS= read line
-	do
-		if [ "$line" != "$master" ]
-		then
-			sudo usermod -L $line
-			echo "Usuario detectado :: Bloqueado"
+do
+	if [ "$line" != "$master" ]
+	then
+		sudo usermod -L $line
+		echo "Usuario detectado :: Bloqueado"
+	fi
+done

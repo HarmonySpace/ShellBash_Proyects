@@ -1,0 +1,51 @@
+Terminales Virtuales
+nombre: tty(1-8)
+acceder: alt+F(1-8)
+comando: sudo chvt NUM
+
+COMANDOS
+Formatear para usar el cut
+$ who | tr -s ' ' | cut -d' ' -f1
+Formatear par cut sin repetir
+$ who | tr -s ' ' | cut -d' ' -f1 | sort | uniq
+
+Comunicación entre usuarios
+Broadcast
+$ echo "Hola usuarios" | sudo wall
+Individual
+$ sudo write maria
+"ctrl + d" para finalizar
+
+Bloquear / inabilitar cuentas de usuario
+-> 
+/etc/passwd/
+$ sudo usermod -L pedro
+->
+/etc/shadow
+/etc/passwd
+Los usuarios bloqueados al inicio de su contraseña cifrada posee un '!'
+->
+/etc/passwd
+campo SHELL, asignar /dev/null o /bin/false
+
+Blockear la cuenta de un usuario con sección iniciada
+Se debe expulsar al usuario de la seccíon actual para aplicar los cambios
+
+Desbloquear / habilitar cuentas de usuario
+->
+/etc/passwd/
+$ sudo usermod -U pedro
+->
+/etc/passwd
+campo SHELL, asignar /dev/null o /bin/false
+
+Sacar usuaris del sistema tty
+$ sudo skill -KILL -u nombredeusuario
+
+
+TAREA
+1. Agregar un número al lado de los usuarios conectodos al sistema
+2. De la lista de usuarios de la tarea 1, enviar el mensaje "bienvenido al sistema" para todos los usuarios y para aquellos que tengan más de una secion iniciada, enviar el mensaje "Dejaremos solamentu una seción iniciada"
+3. Obtenga un listado de aquellos ususarios que contengan su cuenta bloqueada.
+4. Blockear la cuenta de un usuario con sección iniciada
+Se debe expulsar al usuario de la seccíon actual para aplicar los cambios

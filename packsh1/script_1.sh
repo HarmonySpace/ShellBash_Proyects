@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #script 1
 line1=($(who | tr -s ' ' | cut -d" " -f1 | sort))

@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #script 2
 #Nombre de usuarios conectados
@@ -10,8 +11,6 @@ k=($(echo ${#line1[*]}))
 message=("Bienvenido al sistema ")
 #mensaje 1
 message2=("Dejaremos solamente una seción iniciada")
-
-
 
 i=0
 while [ "$i" -lt "$k" ]

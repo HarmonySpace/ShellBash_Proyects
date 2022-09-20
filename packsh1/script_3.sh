@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #Mostrar a los usuarios bloqueados
 
 #directorio

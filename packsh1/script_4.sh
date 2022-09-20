@@ -9,6 +9,7 @@ echo "$log"
 #vars
 i=0
 declare -a log
+master=$(whoami)
 
 echo "$log" | while IFS= read line
 do

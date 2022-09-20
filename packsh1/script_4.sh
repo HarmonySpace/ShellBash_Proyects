@@ -16,6 +16,6 @@ do
 	if [ "$line" != "$master" ]
 	then
 		sudo usermod -L $line
-		echo "Usuario detectado :: Bloqueado"
+		echo "Usuario $line detectado :: Bloqueado"
 	fi
 done

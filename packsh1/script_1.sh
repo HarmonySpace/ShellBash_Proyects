@@ -20,7 +20,7 @@ do
 			fi
 			j=$((j+1))
 		done
-		echo "${line1[i]} $n"
+		echo "${line1[i]} (-$n-)"
 	fi
 	i=$((i+1))
 done
